@@ -111,7 +111,7 @@ void free_hashtable(hashtable_t *ht) {
    // FIXME: must free all substructures!
 }
 
-/* TODO */
+/* TODO *//
 void  ht_del(hashtable_t *ht, char *key) {
   unsigned int idx = hash(key) % ht->size;
   bucket_t *b = ht->buckets[idx];
@@ -152,7 +152,6 @@ void  ht_rehash(hashtable_t *ht, unsigned long newsize) {
   unsigned long i, newidx;
   bucket_t *b, *b_temp;  
   //void *valcpy[sizeof()];
-  //char *keycpy;
   for (i = 0; i < ht->size; i++) {
     b = ht->buckets[i];
     while (b) {
@@ -176,6 +175,4 @@ void  ht_rehash(hashtable_t *ht, unsigned long newsize) {
   //free(b->key); free(b->val); free(b);
   //free_hashtable(ht); 
   //*ht= *ht_temp;
-  //free_hashtable(ht_temp);
-  //free(ht_temp);
 }
